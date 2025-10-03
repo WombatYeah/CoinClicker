@@ -138,3 +138,24 @@ addupgradebutton({
     stat: 2,
     price: 40
 })
+addupgradebutton({
+    name: "Spyglass",
+    image: "Assets/upgrades/spyglass.png",
+    type: "click",
+    stat: 10,
+    price: 150
+})
+addupgradebutton({
+    name: "Map",
+    image: "Assets/upgrades/map.png",
+    type: "second",
+    stat: 3,
+    price: 90
+})
+addupgradebutton({
+    name: "Map",
+    image: "Assets/upgrades/compass.png",
+    type: "second",
+    stat: 11,
+    price: 300
+})
