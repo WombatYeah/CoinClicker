@@ -53,8 +53,12 @@ function addupgradebutton (upgrade){
     button.appendChild(imagetag)
     button.appendChild(divtag)
 
-    button.addEventListener("click", function () {buyupgrade(upgrade)})
+    button.addEventListener("click", function () {
+        upgrade = buyupgrade(upgrade)
+        pricetag.innerText = "$" + upgrade.price
 
+    })
+    
     upgradediv.appendChild(button)
 
 }
@@ -75,6 +79,9 @@ function buyupgrade (upgrade) {
     coins -= upgrade.price
     p.innerText = "Coins: " + coins
 
+    upgrade.price *= 1.3
+    upgrade.price = Math.ceil(upgrade.price)
+
     }
 
     else{
@@ -83,8 +90,7 @@ function buyupgrade (upgrade) {
 
     }
 
-    
-
+    return upgrade
 }
 
 
@@ -100,4 +106,3 @@ addupgradebutton({
     stat: 1,
     price: 25
 })
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 #coin{
     background: none;
@@ -43,6 +42,8 @@ body{
     margin: 0;
 
     display:flex;
+    font-family: "Pirata One", system-ui;
+
     
 }
 
@@ -79,7 +80,6 @@ html{
     width:100%;
 
     font-size: 40px;
-    font-family: "Pirata One", system-ui;
 
 }
 
@@ -119,7 +119,8 @@ html{
     width:90%;
     margin:10px;
     
-    background-color: rgba(255, 255, 255, 0.74)
-
+    background-color: rgba(255, 255, 255, 0.74);
+    font-family:"Playfair Display";
+    font-weight: 600;
 
 }
