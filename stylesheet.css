@@ -47,6 +47,7 @@ body{
 }
 
 #clickerdiv {
+    display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
@@ -85,12 +86,40 @@ html{
 #upgradediv{
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     width: 33%;
 
     background-image: url("Assets/upgradesbackground.png");
+    
+    
+    overflow-y:scroll;
+    scrollbar-width: none;
+
+
+}
+
+#upgradediv::-webkit-scrollbar {
+  display: none;
+}
+
+.upgrade img{
+
+    width:50px;
+    height:50px;
+    margin-right:10px;
+
+}
+
+.upgrade{
+
+    display: flex;
+    align-items: center;
+    width:90%;
+    margin:10px;
+    
+    background-color: rgba(255, 255, 255, 0.74)
 
 
 }
