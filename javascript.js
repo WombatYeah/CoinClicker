@@ -93,10 +93,19 @@ function buyupgrade (upgrade) {
     return upgrade
 }
 
-
-
 let scorepersecond = 0
 let scoreperclick = 1
+
+function second(){
+
+    coins += scorepersecond
+    p.innerText = "Coins: " + coins
+
+}
+
+
+setInterval(second, 1000)
+
 
 
 addupgradebutton({
@@ -105,4 +114,18 @@ addupgradebutton({
     type: "click",
     stat: 1,
     price: 25
+})
+addupgradebutton({
+    name: "Metal Detector",
+    image: "Assets/upgrades/metaldetector.png",
+    type: "second",
+    stat: 1,
+    price: 35
+})
+addupgradebutton({
+    name: "Dual Shovel",
+    image: "Assets/upgrades/dualshovel.png",
+    type: "click",
+    stat: 2,
+    price: 40
 })
