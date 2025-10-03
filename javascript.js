@@ -50,12 +50,19 @@ function addupgradebutton (upgrade){
     divtag.appendChild(stattag)
     divtag.appendChild(pricetag)
 
+    upgrade.owned = 0
+    const ownedtag = document.createElement("div")
+    ownedtag.className = "owned"
+    ownedtag.innerText = upgrade.owned
+
     button.appendChild(imagetag)
     button.appendChild(divtag)
+    button.appendChild(ownedtag)
 
     button.addEventListener("click", function () {
         upgrade = buyupgrade(upgrade)
         pricetag.innerText = "$" + upgrade.price
+        ownedtag.innerText = upgrade.owned
 
     })
     
@@ -78,6 +85,8 @@ function buyupgrade (upgrade) {
 
     coins -= upgrade.price
     p.innerText = "Coins: " + coins
+
+    upgrade.owned += 1
 
     upgrade.price *= 1.3
     upgrade.price = Math.ceil(upgrade.price)

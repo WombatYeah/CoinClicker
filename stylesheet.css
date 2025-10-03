@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 #coin{
-    background: none;
+    background: transparent;
     border: none;
 
-    width:410px;
-    height:410px;
+    width:400px;
+    height:400px;
     padding:0;
 
     animation: rotate 25s infinite;
     animation-timing-function: linear;
+
+    border-radius: 50%;
 
 }
 
@@ -22,6 +24,7 @@
     width:400px;
     height:400px;
     transition:20ms;
+    user-select: none;
 
 }
 
@@ -29,6 +32,7 @@
 
     width:375px;
     height:375px;
+    user-select: none;
 
 }
 
@@ -122,5 +126,13 @@ html{
     background-color: rgba(255, 255, 255, 0.74);
     font-family:"Playfair Display";
     font-weight: 600;
+
+}
+
+.owned{
+
+    font-size: 75px;
+    margin-left: auto;
+    margin-right: 10px;
 
 }
