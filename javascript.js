@@ -8,43 +8,43 @@ const upgradediv = document.getElementById("upgradediv")
 
 
 
-function addcoin (count){
+function addcoin(){
 
-    coins += count
+    coins += scoreperclick
     p.innerText = "Coins: " + coins
 
 }
 
 
-function addupgradebutton (name,image,type,stat,price){
+function addupgradebutton (upgrade){
 
     const button = document.createElement("button")
     button.className = ("upgrade")
     const imagetag = document.createElement("img")    
 
-    imagetag.src=image
+    imagetag.src=upgrade.image
     
     const divtag = document.createElement("div")
 
     const nametag = document.createElement("p")
 
-    nametag.innerText = name
+    nametag.innerText = upgrade.name
 
     const stattag = document.createElement("p")
 
-    if (type == "click"){
+    if (upgrade.type == "click"){
 
-        stattag.innerText = stat + " per click"
+        stattag.innerText = "+$" + upgrade.stat + " per click"
     }
 
     else {
 
-        stattag.innerText = stat + " per second"
+        stattag.innerText = "+$" + upgrade.stat + " per second"
     }
 
     const pricetag = document.createElement("p")
 
-    pricetag.innerText = "$" + price
+    pricetag.innerText = "$" + upgrade.price
 
     divtag.appendChild(nametag)
     divtag.appendChild(stattag)
@@ -53,32 +53,51 @@ function addupgradebutton (name,image,type,stat,price){
     button.appendChild(imagetag)
     button.appendChild(divtag)
 
+    button.addEventListener("click", function () {buyupgrade(upgrade)})
+
     upgradediv.appendChild(button)
 
 }
 
+function buyupgrade (upgrade) {
 
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
-addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
+    if (coins >= upgrade.price){
+
+    if (upgrade.type == "click"){
+        scoreperclick += upgrade.stat
+    }
+
+    else{
+        scorepersecond += upgrade.stat
+    }
+    alert("you bought " + upgrade.name)
+
+    coins -= upgrade.price
+    p.innerText = "Coins: " + coins
+
+    }
+
+    else{
+
+        alert("you're too poor")
+
+    }
+
+    
+
+}
+
+
+
+let scorepersecond = 0
+let scoreperclick = 1
+
+
+addupgradebutton({
+    name: "Shovel",
+    image: "Assets/upgrades/shovel.png",
+    type: "click",
+    stat: 1,
+    price: 25
+})
 addupgradebutton("name","Assets/Gold_Doubloon.png","click","1","100")
