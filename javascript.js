@@ -1,5 +1,5 @@
 let coins = 0
-const p = document.getElementById("coins")
+const p = document.getElementById("score")
 p.innerText = "Coins: " + coins
 
 

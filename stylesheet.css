@@ -1,0 +1,24 @@
+#coin{
+    background: none;
+    border: none;
+
+    width:410px;
+    height:410px;
+    padding:0;
+
+}
+
+#coin img{
+
+    width:400px;
+    height:400px;
+    transition:20ms;
+
+}
+
+#coin:active img{
+
+    width:375px;
+    height:375px;
+
+}
