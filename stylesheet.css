@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+
 #coin{
     background: none;
     border: none;
@@ -6,6 +9,13 @@
     height:410px;
     padding:0;
 
+    animation: rotate 25s infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes rotate {
+  100% {transform: rotate(360deg);}
 }
 
 #coin img{
@@ -20,5 +30,67 @@
 
     width:375px;
     height:375px;
+
+}
+
+body{
+
+    background-image: url("Assets/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    display:flex;
+    
+}
+
+#clickerdiv {
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+html{
+
+    height:100%
+
+}
+
+
+#coindiv{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width:100%;
+
+
+}
+
+#scorediv{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100px;
+    width:100%;
+
+    font-size: 40px;
+    font-family: "Pirata One", system-ui;
+
+}
+
+#upgradediv{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 33%;
+
+    background-image: url("Assets/upgradesbackground.png");
+
 
 }
