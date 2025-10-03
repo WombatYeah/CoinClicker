@@ -25,6 +25,7 @@
     height:400px;
     transition:20ms;
     user-select: none;
+    -webkit-user-drag: none;
 
 }
 
@@ -32,7 +33,7 @@
 
     width:375px;
     height:375px;
-    user-select: none;
+
 
 }
 
