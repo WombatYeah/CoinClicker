@@ -10,4 +10,4 @@ Shovel Icon: [Sneeboer on Wikimedia](https://commons.wikimedia.org/wiki/File:Sho
 
 Metal Detector Icon: [Rundvald on Wikimedia](https://commons.wikimedia.org/wiki/File:Detecteur-metaux-Pro-Detect-Made-in-Saint-Hilaire-du-Harcouet-1980s-byRundvald.jpg)
 
-Compass Icon: [Wikimedia]https://commons.wikimedia.org/wiki/File:Waltham-Compass.png
+Compass Icon: [Wikimedia](https://commons.wikimedia.org/wiki/File:Waltham-Compass.png)
