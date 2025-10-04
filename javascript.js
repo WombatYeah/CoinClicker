@@ -80,6 +80,7 @@ function buyupgrade (upgrade) {
 
     else{
         scorepersecond += upgrade.stat
+        secondtag.innerText = "coins per second: " + scorepersecond
     }
     alert("you bought " + upgrade.name)
 
@@ -114,6 +115,12 @@ function second(){
 
 
 setInterval(second, 1000)
+
+
+const secondtag = document.createElement("p")
+secondtag.id="scorepersecond"
+secondtag.innerText = "coins per second: " + scorepersecond
+scorediv.appendChild(secondtag)
 
 
 
