@@ -190,7 +190,7 @@ for(const element of upgradeslist) {
 
     if(!unlockedupgrades.includes(element.upgrade.name)) {
 
-        if ((element.upgrade.price * 0.1) < coins){
+        if ((element.upgrade.price - (element.upgrade.price * 0.1)) < coins){
 
             unlockedupgrades.push(element.upgrade.name)
 
