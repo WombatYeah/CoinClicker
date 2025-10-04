@@ -13,6 +13,8 @@
 
     border-radius: 50%;
 
+    cursor: pointer;
+
 }
 
 @keyframes rotate {
@@ -127,17 +129,30 @@ html{
     background-color: rgba(255, 255, 255, 0.74);
     font-family:"Playfair Display";
     font-weight: 600;
-    transition:200ms;
+    transition:400ms;
+    cursor: pointer;
 
+
+}
+
+.upgrade *{
+
+    transition: 400ms;
 
 }
 
 .gray{
 
     background-color: rgba(129, 129, 129, 0.74);
+    cursor:not-allowed;
 
 }
 
+.blurred * {
+
+    filter: blur(3px);
+
+}
 
 .owned{
 

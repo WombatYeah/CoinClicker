@@ -188,7 +188,21 @@ for(const element of upgradeslist) {
         element.button.className = "upgrade"
     }
 
+    if(!unlockedupgrades.includes(element.upgrade.name)) {
+
+        if ((element.upgrade.price * 0.1) < coins){
+
+            unlockedupgrades.push(element.upgrade.name)
+
+        } else {
+            element.button.className += " blurred"
+        }
+
+    }
+
 }
+
+
 
 requestAnimationFrame(grayupgrades)
 
@@ -197,3 +211,5 @@ requestAnimationFrame(grayupgrades)
 
 
 requestAnimationFrame(grayupgrades)
+
+let unlockedupgrades = []
