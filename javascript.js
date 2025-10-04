@@ -68,6 +68,11 @@ function addupgradebutton (upgrade){
     
     upgradediv.appendChild(button)
 
+    upgradeslist.push({
+        button:button,
+        upgrade:upgrade
+    })
+
 }
 
 function buyupgrade (upgrade) {
@@ -82,7 +87,6 @@ function buyupgrade (upgrade) {
         scorepersecond += upgrade.stat
         secondtag.innerText = "coins per second: " + scorepersecond
     }
-    alert("you bought " + upgrade.name)
 
     coins -= upgrade.price
     p.innerText = "Coins: " + coins
@@ -91,12 +95,6 @@ function buyupgrade (upgrade) {
 
     upgrade.price *= 1.3
     upgrade.price = Math.ceil(upgrade.price)
-
-    }
-
-    else{
-
-        alert("you're too poor")
 
     }
 
@@ -117,10 +115,16 @@ function second(){
 setInterval(second, 1000)
 
 
+let upgradeslist = []
+
+
 const secondtag = document.createElement("p")
 secondtag.id="scorepersecond"
 secondtag.innerText = "coins per second: " + scorepersecond
 scorediv.appendChild(secondtag)
+
+
+
 
 
 
@@ -166,3 +170,30 @@ addupgradebutton({
     stat: 11,
     price: 300
 })
+
+
+
+function grayupgrades (){
+
+for(const element of upgradeslist) {
+
+    console.log(element)
+
+    if (element.upgrade.price > coins){
+
+        element.button.className = "upgrade gray"
+
+    }
+    else{
+        element.button.className = "upgrade"
+    }
+
+}
+
+requestAnimationFrame(grayupgrades)
+
+}
+
+
+
+requestAnimationFrame(grayupgrades)

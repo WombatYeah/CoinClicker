@@ -124,14 +124,20 @@ html{
     align-items: center;
     width:90%;
     margin:10px;
-    
     background-color: rgba(255, 255, 255, 0.74);
     font-family:"Playfair Display";
     font-weight: 600;
+    transition:200ms;
+
+
+}
+
+.gray{
 
     background-color: rgba(129, 129, 129, 0.74);
 
 }
+
 
 .owned{
 
