@@ -216,7 +216,7 @@ unlockedupgrades.push("Shovel")
 
 let multiplyer
 let prestigelevel = 0
-let prestigerequirement = 1000000
+let prestigerequirement = 1000
 const prestigereq = document.getElementById("prestigereq")
 prestigereq.innerText = "prestiging requires " +prestigerequirement + " coins"
 
