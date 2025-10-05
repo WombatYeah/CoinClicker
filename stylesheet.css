@@ -181,6 +181,7 @@ html{
     align-content: center;
     justify-content: center;
     height: 200px;
+    flex-direction: column;
 
 
 }
@@ -189,11 +190,13 @@ html{
 
     font-size: 30px;
     justify-content: center;
-    width: 20%;
     border-radius: 15px;
     background-color: rgb(185, 218, 255);
     transition: 500ms;
     margin: 10px;
+    padding-left: 10px;
+
+
 
     
 
@@ -271,6 +274,23 @@ html{
     transition: 500ms;;
     padding: 8px;
     border-radius: 15px;
+    
+
+}
+
+.prestigehelpdiv:hover{
+
+    background-color: rgb(66, 69, 255);
+
+
+}
+
+#prestigereq{
+
+    display: flex;
+    padding: 5px;
+    background-color: rgb(185, 218, 255);
+    border-radius: 10px;
     
 
 }

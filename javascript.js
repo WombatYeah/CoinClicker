@@ -216,22 +216,37 @@ unlockedupgrades.push("Shovel")
 
 let multiplyer
 let prestigelevel = 0
+let prestigerequirement = 1000000
+const prestigereq = document.getElementById("prestigereq")
+prestigereq.innerText = "prestiging requires " +prestigerequirement + " coins"
 
-const prestigehelp = document.getElementById("prestigehelp")
 prestigehelp.innerText = "Prestigeing will reset your progress but update your coin. The next coin will grant a 2x coin multiplyer from the last coin" + "current prestige level: " + prestigelevel
+
+
 
 function prestige (){
 
-    confirm("Are you sure you want to prestige?")
+    if(coins > prestigerequirement){
 
-    multiplyer += 2
-    unlockedupgrades = []
-    unlockedupgrades.push("Shovel")
-    coins = 0
-    scoreperclick = 1
-    p.innerText = "Coins: " + coins
-    scorepersecond = 0
-    secondtag.innerText = "coins per second: " + scorepersecond
+        confirm("Are you sure you want to prestige?")
+
+        multiplyer += 2
+        unlockedupgrades = []
+        unlockedupgrades.push("Shovel")
+        coins = 0
+        scoreperclick = 1
+        p.innerText = "Coins: " + coins
+        scorepersecond = 0
+        secondtag.innerText = "coins per second: " + scorepersecond
+        prestigerequirement = prestigerequirement*100
+
+    }
+
+    else{
+
+        alert("Not enough coins! You need " + prestigerequirement + " to prestige")
+    }
+    
 
 
 }
