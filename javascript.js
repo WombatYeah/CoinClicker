@@ -177,7 +177,6 @@ function grayupgrades (){
 
 for(const element of upgradeslist) {
 
-    console.log(element)
 
     if (element.upgrade.price > coins){
 
@@ -213,3 +212,26 @@ requestAnimationFrame(grayupgrades)
 requestAnimationFrame(grayupgrades)
 
 let unlockedupgrades = []
+unlockedupgrades.push("Shovel")
+
+let multiplyer
+let prestigelevel = 0
+
+const prestigehelp = document.getElementById("prestigehelp")
+prestigehelp.innerText = "Prestigeing will reset your progress but update your coin. The next coin will grant a 2x coin multiplyer from the last coin" + "current prestige level: " + prestigelevel
+
+function prestige (){
+
+    confirm("Are you sure you want to prestige?")
+
+    multiplyer += 2
+    unlockedupgrades = []
+    unlockedupgrades.push("Shovel")
+    coins = 0
+    scoreperclick = 1
+    p.innerText = "Coins: " + coins
+    scorepersecond = 0
+    secondtag.innerText = "coins per second: " + scorepersecond
+
+
+}

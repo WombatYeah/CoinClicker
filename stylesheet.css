@@ -82,10 +82,10 @@ html{
 
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     flex-direction: column;
     /* height:100%; */
-    width:100%;
+    /* width:100%; */
 
     font-size: 40px;
 
@@ -172,4 +172,105 @@ html{
     margin: 0%;
     font-size: 20px;
     font-family: "Playfair Display";
+}
+
+#prestigediv{
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 200px;
+
+
+}
+
+#prestigebutton{
+
+    font-size: 30px;
+    justify-content: center;
+    width: 20%;
+    border-radius: 15px;
+    background-color: rgb(185, 218, 255);
+    transition: 500ms;
+    margin: 10px;
+
+    
+
+}
+
+#prestigebutton:hover{
+
+    background-color: rgb(66, 69, 255);
+
+
+}
+
+/* .prestigehelpdiv{
+
+    font-size: 30px;
+    width: 20px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgb(185, 218, 255);
+    transition: 500ms;
+    cursor: help;
+
+
+    display: block;
+
+}
+
+.prestigehelpdiv:hover{
+
+    background-color: rgb(66, 69, 255);
+
+
+} */
+
+
+.prestigehelpdiv {
+  position: relative;
+  display: inline-block; /* Or block, depending on your needs */
+}
+
+
+.tooltiptext{
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none; 
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -120px; 
+    margin-right: -120px;
+    font-size: 20px;
+    transition: opacity 0.3s;
+
+}
+
+
+.prestigehelpdiv:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.prestigehelpdiv{
+
+    background: rgb(185, 218, 255);
+    transition: 500ms;;
+    padding: 8px;
+    border-radius: 15px;
+    
+
 }
