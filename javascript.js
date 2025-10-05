@@ -239,6 +239,8 @@ function prestige (){
         scorepersecond = 0
         secondtag.innerText = "coins per second: " + scorepersecond
         prestigerequirement = prestigerequirement*100
+        prestigereq.innerText = "prestiging requires " +prestigerequirement + " coins"
+
 
     }
 
