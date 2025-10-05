@@ -216,13 +216,13 @@ unlockedupgrades.push("Shovel")
 
 let multiplyer = 0
 let prestigelevel = 0
-let prestigerequirement = 10
+let prestigerequirement = 1000
 const prestigereq = document.getElementById("prestigereq")
-prestigereq.innerText = multiplyer + "x multiplyer \n prestiging requires " +prestigerequirement + " coins"
+prestigereq.innerText = multiplyer + "x multiplier \n prestiging requires " +prestigerequirement + " coins"
 let coinlevel = 1
 const coinimg = document.getElementById("coinimg")
 
-prestigehelp.innerText = "Prestigeing will reset your progress but update your coin. The next coin will grant a 2x coin multiplyer from the last coin" + "current prestige level: " + prestigelevel
+prestigehelp.innerText = "Prestiging will reset your progress but update your coin. The next coin will grant a 2x coin multiplyer from the last coin" + "current prestige level: " + prestigelevel
 
 
 
@@ -230,32 +230,36 @@ function prestige (){
 
     if(coins > prestigerequirement){
 
-        confirm("Are you sure you want to prestige?")
+        if(confirm("Are you sure you want to prestige?") == true){
 
-        multiplyer += 2
-        unlockedupgrades = []
-        unlockedupgrades.push("Shovel")
-        coins = 0
-        scoreperclick = 1
-        p.innerText = "Coins: " + coins
-        scorepersecond = 0
-        secondtag.innerText = "coins per second: " + scorepersecond
+            multiplyer += 2
+            unlockedupgrades = []
+            unlockedupgrades.push("Shovel")
+            coins = 0
+            scoreperclick = 1
+            p.innerText = "Coins: " + coins
+            scorepersecond = 0
+            secondtag.innerText = "coins per second: " + scorepersecond
 
-        if(coinlevel < 4){
+            if(coinlevel < 4){
 
-            // prestigerequirement = prestigerequirement*100
-            prestigereq.innerText = multiplyer + "x multiplyer" <br> "prestiging requires " +prestigerequirement + " coins"
-            coinlevel += 1
-            coinimg.src = "Assets/" + coinlevel + ".png"
+                prestigerequirement = prestigerequirement*100
+                prestigereq.innerText = multiplyer + "x multiplier \n prestiging requires " +prestigerequirement + " coins"
+                coinlevel += 1
+                coinimg.src = "Assets/" + coinlevel + ".png"
+            
+            }
+
+            else{
+
+                prestigereq.innerText = "You have reached maximum prestige level. Good job!"
+                coinimg.src = "Assets/5.png"
+                coinlevel = 5
+            }
+
+        }
+
         
-        }
-
-        else{
-
-            prestigereq.innerText = "You have reached maximum prestige level. Good job!"
-            coinimg.src = "Assets/5.png"
-            coinlevel = 5
-        }
 
 
 
