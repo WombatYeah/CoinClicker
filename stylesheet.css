@@ -288,6 +288,7 @@ html{
 #prestigereq{
 
     display: flex;
+    justify-content: center;
     padding: 5px;
     background-color: rgb(185, 218, 255);
     border-radius: 10px;

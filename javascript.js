@@ -214,11 +214,13 @@ requestAnimationFrame(grayupgrades)
 let unlockedupgrades = []
 unlockedupgrades.push("Shovel")
 
-let multiplyer
+let multiplyer = 0
 let prestigelevel = 0
-let prestigerequirement = 1000
+let prestigerequirement = 10
 const prestigereq = document.getElementById("prestigereq")
-prestigereq.innerText = "prestiging requires " +prestigerequirement + " coins"
+prestigereq.innerText = multiplyer + "x multiplyer \n prestiging requires " +prestigerequirement + " coins"
+let coinlevel = 1
+const coinimg = document.getElementById("coinimg")
 
 prestigehelp.innerText = "Prestigeing will reset your progress but update your coin. The next coin will grant a 2x coin multiplyer from the last coin" + "current prestige level: " + prestigelevel
 
@@ -238,8 +240,26 @@ function prestige (){
         p.innerText = "Coins: " + coins
         scorepersecond = 0
         secondtag.innerText = "coins per second: " + scorepersecond
-        prestigerequirement = prestigerequirement*100
-        prestigereq.innerText = "prestiging requires " +prestigerequirement + " coins"
+
+        if(coinlevel < 4){
+
+            // prestigerequirement = prestigerequirement*100
+            prestigereq.innerText = multiplyer + "x multiplyer" <br> "prestiging requires " +prestigerequirement + " coins"
+            coinlevel += 1
+            coinimg.src = "Assets/" + coinlevel + ".png"
+        
+        }
+
+        else{
+
+            prestigereq.innerText = "You have reached maximum prestige level. Good job!"
+            coinimg.src = "Assets/5.png"
+            coinlevel = 5
+        }
+
+
+
+        
 
 
     }
