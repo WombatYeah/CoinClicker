@@ -1,6 +1,8 @@
 # CoinClicker
 
-Coin clicker is an clicker/idle game themed about pirates! 
+Coin clicker is an clicker/idle game themed about pirates! Click the doubloon to gain coins and upgrade your fleet! 
+
+>## "Progress through the teirs of coins and go from a measly peice of eight to a grand gold doubloon!"
 
 ## Credits
 
