@@ -1,5 +1,7 @@
 # CoinClicker
 
+Coin clicker is an clicker/idle game themed about pirates! 
+
 ## Credits
 
 Ocean background: [kallerna on Wikimedia](https://commons.wikimedia.org/wiki/File:Atlantic_near_Faroe_Islands.jpg)
@@ -11,3 +13,15 @@ Shovel Icon: [Sneeboer on Wikimedia](https://commons.wikimedia.org/wiki/File:Sho
 Metal Detector Icon: [Rundvald on Wikimedia](https://commons.wikimedia.org/wiki/File:Detecteur-metaux-Pro-Detect-Made-in-Saint-Hilaire-du-Harcouet-1980s-byRundvald.jpg)
 
 Compass Icon: [Wikimedia](https://commons.wikimedia.org/wiki/File:Waltham-Compass.png)
+
+Peg Leg Icon: [Wikimedia](https://commons.wikimedia.org/wiki/File:Aritificial_peg_leg,_Europe,_1850-1900_Wellcome_L0057690.jpg)
+
+Small Ship Icon: [Wikimedia](https://commons.wikimedia.org/wiki/File:Princess_Pacific_at_Stanley_Hong_Kong_Small.jpg)
+
+Cannon Icon: [Wikimedia](https://commons.wikimedia.org/wiki/File:The_Tsar_Cannon_%2819780062749%29.jpg)
+
+Flag Icon: [Wikimedia](https://commons.wikimedia.org/wiki/File:Jolly_Roger_Flag-02.svg)
+
+Parrot Icon: [Wikimedia](https://commons.wikimedia.org/wiki/File:Ara_militaris_-pirate_festival_%282007%29-8a.jpg)
+
+Peice of 8: [Kingman Yacht Center](https://www.kingmanyachtcenter.com/sea-history-what-is-a-piece-of-eight/)

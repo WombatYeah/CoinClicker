@@ -5,13 +5,16 @@ p.innerText = "Coins: " + coins
 const upgradediv = document.getElementById("upgradediv")
 
 
-
+const clicksfx = document.getElementById("clicksfx")
 
 
 function addcoin(){
 
     coins += scoreperclick
     p.innerText = "Coins: " + coins
+    clicksfx.src = ""
+    clicksfx.src = "Assets/click.mp3"
+    clicksfx.play();
 
 }
 
@@ -153,8 +156,8 @@ addupgradebutton({
     name: "Spyglass",
     image: "Assets/upgrades/spyglass.png",
     type: "click",
-    stat: 10,
-    price: 150
+    stat: 5,
+    price: 100
 })
 addupgradebutton({
     name: "Map",
@@ -164,11 +167,60 @@ addupgradebutton({
     price: 90
 })
 addupgradebutton({
-    name: "Map",
+    name: "Compass",
     image: "Assets/upgrades/compass.png",
     type: "second",
     stat: 11,
     price: 300
+})
+addupgradebutton({
+    name: "Peg leg",
+    image: "Assets/upgrades/pegleg.png",
+    type: "second",
+    stat: 40,
+    price: 800
+})
+addupgradebutton({
+    name: "Small Ship",
+    image: "Assets/upgrades/smallship.png",
+    type: "second",
+    stat: 100,
+    price: 1500
+})
+addupgradebutton({
+    name: "Cannon",
+    image: "Assets/upgrades/cannon.png",
+    type: "click",
+    stat: 75,
+    price: 1750
+})
+addupgradebutton({
+    name: "Flag",
+    image: "Assets/upgrades/flag.png",
+    type: "second",
+    stat: 600,
+    price: 3000
+})
+addupgradebutton({
+    name: "Eye Patch",
+    image: "Assets/upgrades/eyepatch.png",
+    type: "click",
+    stat: 105,
+    price: 2000
+})
+addupgradebutton({
+    name: "Large Ship",
+    image: "Assets/upgrades/largeship.png",
+    type: "second",
+    stat: 1000,
+    price: 5000
+})
+addupgradebutton({
+    name: "Parrot",
+    image: "Assets/upgrades/parrot.png",
+    type: "second",
+    stat: 10000,
+    price: 20000
 })
 
 
@@ -257,6 +309,8 @@ function prestige (){
                 coinimg.src = "Assets/5.png"
                 coinlevel = 5
             }
+            
+            playvid()
 
         }
 
@@ -274,7 +328,7 @@ function prestige (){
         alert("Not enough coins! You need " + prestigerequirement + " to prestige")
     }
 
-    playvid()
+    
 
 }
 
@@ -293,7 +347,7 @@ function playvid(){
 function hidevid(){
 
     prestigevid.src=("");
-    prestigevid.src=("explosion.mp4")
+    prestigevid.src=("Assets/explosion.mp4")
     document.getElementById("videodiv").style.display = "none";
 
 
