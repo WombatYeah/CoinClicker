@@ -221,6 +221,7 @@ const prestigereq = document.getElementById("prestigereq")
 prestigereq.innerText = multiplyer + "x multipli er \n prestiging requires " +prestigerequirement + " coins"
 let coinlevel = 1
 const coinimg = document.getElementById("coinimg")
+const prestigevid = document.getElementById("prestigevideo")
 
 prestigehelp.innerText = "Prestiging will reset your progress but update your coin. The next coin will grant a 2x coin multiplyer from the last coin" + "current prestige level: " + prestigelevel
 
@@ -272,7 +273,28 @@ function prestige (){
 
         alert("Not enough coins! You need " + prestigerequirement + " to prestige")
     }
+
+    playvid()
+
+}
+
+
+
+function playvid(){
+
+    document.getElementById("videodiv").style.display = "block";
     
+    prestigevid.play();
+    setTimeout(hidevid, 4000);
+    
+    
+}
+
+function hidevid(){
+
+    prestigevid.src=("");
+    prestigevid.src=("explosion.mp4")
+    document.getElementById("videodiv").style.display = "none";
 
 
 }

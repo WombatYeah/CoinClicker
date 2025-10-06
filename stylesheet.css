@@ -296,3 +296,23 @@ html{
     
 
 }
+
+#videodiv{
+
+    position:fixed;
+    display: none;
+    height: 100;
+    width: 100vw;
+
+}
+
+#prestigevideo{
+
+
+    transition: 1000ms;
+    width: 100vw;
+    height: 100%;
+    
+
+
+}
