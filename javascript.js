@@ -352,3 +352,6 @@ function hidevid(){
 
 
 }
+
+const backgroundsfx = document.getElementById("backgroundmusic")
+backgroundsfx.play();
