@@ -9,7 +9,7 @@
 </head>
 
 
-<body>
+<body onclick="playbackgroundsfx()">
     <div id="clickerdiv">
         <div id="scorediv">
             <p id="score"> </p>
@@ -58,9 +58,7 @@
 
     <audio id="clicksfx" src="Assets/click.mp3"></audio>
 
-    <audio autoplay loop>
-        <source src="Assets/backgroundmusic.mp3" type="audio/mp3">
-    </audio>
+    <audio id="backgroundmusic" src="Assets/backgroundmusic.mp3" type="audio/mp3" loop></audio>
     
 
 

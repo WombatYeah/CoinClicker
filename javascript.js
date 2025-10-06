@@ -354,4 +354,9 @@ function hidevid(){
 }
 
 const backgroundsfx = document.getElementById("backgroundmusic")
-backgroundsfx.play();
+
+function playbackgroundsfx(){
+    backgroundsfx.volume = 0.6
+    backgroundsfx.play();
+
+}
